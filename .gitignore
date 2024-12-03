@@ -1,0 +1,10 @@
+build/
+*.egg-info
+eggs/
+.eggs/
+.idea/
+*__pycache__*
+venv
+*~lock*
+.python-version
+mypy_result.xml
