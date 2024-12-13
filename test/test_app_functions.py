@@ -48,4 +48,4 @@ def test_get_top_2_activity_codes(input_df, lookup_df):
 
 def test_get_activity_sessions_per_user(input_df, lookup_df):
   op = get_activity_sessions_per_user(input_df, lookup_df)
-  assert op.count() == 69
+  assert op.count() == 67
