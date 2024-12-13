@@ -29,6 +29,7 @@ def test_filter_invalid_records(input_df):
 
 def test_add_activity_lookup(input_df, lookup_df):
   op = add_activity_lookup(input_df, lookup_df)
+  assert op.filter(fn.col('activity_code') == 999).count() == 24
   assert op.count() == 200
 
 
