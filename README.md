@@ -46,12 +46,12 @@ Here the activity column is a variable length pipe separated string.
 
 4. Find the two top activities for each calendar day across all users. </br>The output should look similar to this:
       
-   |  activity   |    day     | activity_count |
-   |:-----------:|:----------:|:--------------:|
-   |   search    | 2024-12-01 |      2000      |
-   |   scroll    | 2024-12-01 |      779       |
-   |   search    | 2024-12-02 |      1200      |
-   | form-submit | 2024-12-02 |      1000      |
+   | activity_code |    day     | activity_count |
+   |:-------------:|:----------:|:--------------:|
+   |      12       | 2024-12-01 |      2000      |
+   |      10       | 2024-12-01 |      779       |
+   |       7       | 2024-12-02 |      1200      |
+   |      12       | 2024-12-02 |      1000      |
 
    Implement the function `get_top_2_activity_codes` matching this requirement in [main.py](https://github.com/bliseng/blis-data-coding-exercise-pyspark/blob/main/blis/main.py)
 
@@ -61,13 +61,13 @@ Here the activity column is a variable length pipe separated string.
    If a session goes across calendar days, assign the session to the date when it started. 
    </br>The output should look similar to this:
    
-   | session_start_date | user  | session_time_in_mins |
-   |:------------------:|:-----:|:--------------------:|
-   |     2024-12-01     | user1 |          15          |
-   |     2024-12-01     | user2 |          45          |
-   |     2024-12-01     | user1 |          60          |
-   |     2024-12-02     | user1 |          57          |
-   |     2024-12-02     | user2 |         128          |
+   | session_start_date | user_id | session_time_in_mins |
+   |:------------------:|:-------:|:--------------------:|
+   |     2024-12-01     |  user1  |          15          |
+   |     2024-12-01     |  user2  |          45          |
+   |     2024-12-01     |  user1  |          60          |
+   |     2024-12-02     |  user1  |          57          |
+   |     2024-12-02     |  user2  |         128          |
 
    Implement the function `get_activity_sessions_per_user` matching this requirement in [main.py](https://github.com/bliseng/blis-data-coding-exercise-pyspark/blob/main/blis/main.py)
 
