@@ -4,6 +4,7 @@ Test cases
 import pytest
 from pyspark.sql import SparkSession
 from pyspark.sql.dataframe import DataFrame
+from pyspark.sql import functions as fn
 
 from blis.main import (filter_invalid_records, 
                        add_activity_lookup, 

@@ -23,6 +23,7 @@ def create_test_folder(tmp_path_factory):
 @pytest.fixture(scope='session', name='spark_session')
 def pyspark_app() -> SparkSession:
     spark = SparkSession.builder.appName(APP_NAME).getOrCreate()
+    spark.conf.set("spark.sql.session.timeZone", "UTC")
     yield spark
 
 
